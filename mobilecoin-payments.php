@@ -111,8 +111,7 @@ function init_your_gateway_class() {
 																			'title' => __('Endpoint URL', 'mobilecoin_payments'),
 																			'type' => 'text',
 																			'description' => __('Insert here the endpoint URL where the API will make calls', 'mobilecoin_payments'),
-																			'default' => '',
-																			'placeholder' => __('https://your_endpoint_url.something', 'mobilecoin_payments'),
+																			'default' => 'https://payments.mobilecoin.com/api/hosted-payments-page/',
 																			'desc_tip' => true
 																		),
 														'title' => array(
