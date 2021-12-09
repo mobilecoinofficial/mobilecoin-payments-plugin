@@ -1,4 +1,6 @@
 <?php
+// Copyright (c) 2021 MobileCoin Inc.
+
 /*
  * Plugin Name: MobileCoin Payments
  * Plugin URI: https://mobilecoin.com/
