@@ -114,7 +114,7 @@ add_action('plugins_loaded', function () {
                             'title' => __('Instructions', 'mobilecoin_payments'),
                             'type' => 'textarea',
                             'description' => __('Instructions that will be added to the thank you page and order email', 'mobilecoin_payments'),
-                            'default' => 'Default instructions', 'mobilecoin_payments',
+                            'default' => '',
                             'desc_tip' => true
                         ),
 
