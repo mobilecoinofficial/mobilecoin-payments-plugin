@@ -12,8 +12,8 @@
 */
 
 /** Check if the WooCommerce plugin is active */
-if( !in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins'))) ) {
-	return;
+if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+    return;
 }
 
 add_filter('woocommerce_payment_gateways', function ($methods) {
@@ -57,8 +57,7 @@ add_action('plugins_loaded', function () {
                  * {webhook name} is mobilecoin-payment-complete
                  */
                 add_action('woocommerce_api_mobilecoin-payment-complete', array($this, 'mobilecoin_payment_complete_cb'));
-
-
+                
                 /**
                  * Add Order Custom Details
                  * https://rudrastyh.com/woocommerce/customize-order-details.html
