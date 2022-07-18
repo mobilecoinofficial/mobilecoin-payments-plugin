@@ -16,8 +16,25 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
     return;
 }
 
-add_filter('woocommerce_payment_gateways', function ($methods) {
-    $methods[] = 'MobileCoin_Payments_Gateway_WC';
+add_filter('woocommerce_payment_gateways', function ( $methods ) {
+    $mob_payments_gateway = new MobileCoin_Payments_Gateway_WC;
+
+    /**
+     * Required fields for front-end display
+     * Public API Key, Endpoint URL, Title
+     */
+    if(
+        (
+                !empty( $mob_payments_gateway->public_api_key ) &&
+                !empty( $mob_payments_gateway->endpoint_url ) &&
+                !empty( $mob_payments_gateway->title ) &&
+                !is_admin()
+        ) || (
+                is_admin()
+        )
+    ) {
+        $methods[] = $mob_payments_gateway;
+    }
     return $methods;
 });
 
