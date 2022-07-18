@@ -163,7 +163,7 @@ add_action('plugins_loaded', function () {
                     "payment" => array(
                         "description" => $site_url . " Order #" . $order_id,
                         "fiat_amount" => $order->get_total(),
-                        "fiat_amount_currency" => "USD",
+                        "fiat_amount_currency" => get_woocommerce_currency(),
                         "expires_at" => time() + (10 * 60) // 10 mins; 60 secs
                     ),
                     "success_url" => $site_url . "/wc-api/mobilecoin-payment-complete?order_id=" . $order_id . '&order_key=' . $order->get_order_key(),
