@@ -45,7 +45,7 @@ add_action('plugins_loaded', function () {
             public function __construct()
             {
                 $this->id = 'mobilecoin_payments';
-                $this->icon = apply_filters('woocommerce_mobilecoin_url', plugins_url('/images/mobilecoin-symbol.svg', __FILE__));
+                $this->icon = apply_filters('woocommerce_mobilecoin_icon', plugins_url('/images/mobilecoin-symbol.svg', __FILE__));
                 $this->has_fields = FALSE;
 
                 $this->method_title = __('MobileCoin Payments', 'mobilecoin_payments');
